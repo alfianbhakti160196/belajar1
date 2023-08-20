@@ -21,7 +21,7 @@ func main() {
 	}
 
 	// Auto Migrasi ke database
-	err = db.AutoMigrate(&models.User{}, &models.Pengaduan{}, &models.Tanggapan{})
+	err = db.AutoMigrate(&models.User{}, &models.Pengaduan{}, &models.Tanggapan{}, &models.Masarakat{})
 	if err != nil {
 		panic("error migrasi database")
 	}

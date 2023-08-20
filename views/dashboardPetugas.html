@@ -56,10 +56,17 @@
                                     <td>{{ $elem.Tanggal }}</td>
                                     <td>{{ $elem.Status }}</td>
                                     <td>
+                                        {{ if (eq $elem.Status "selesai") }}
+
+                                        {{ else }}
+
                                         <!-- Button trigger modal -->
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#{{ $elem.ID }}">
                                             Tanggapi
                                         </button>
+
+                                        {{ end }}
+
 
                                         <!-- Modal -->
                                         <div class="modal fade" id="{{ $elem.ID }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
